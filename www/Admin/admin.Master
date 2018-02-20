@@ -1,0 +1,69 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.master.cs" Inherits="myblog.Admin.admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta name="robots" content="noindex,nofollow" />
+   <link rel="shortcut icon" href="../img/favicon.ico" />
+    <link href="../style/admin.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-2.1.0.min.js"></script>
+	<script type='text/javascript' src='menu_jquery.js'></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+       <div id='cssmenu'>
+<ul>
+   <li class='active'><a href="Default.aspx"><span>Panel</span></a></li>
+       <li class='has-sub'><a href='#'><span>Bildirim</span></a>
+      <ul>
+          <li><a href='#'><span><asp:LinkButton ID="lnkbildirimhepsi" runat="server"  OnClick="lnkbildirimhepsi_Click">Hepsi</asp:LinkButton></span></a></li>
+         <li class='last'><a href='#'><span><asp:LinkButton ID="lnkbildirimekle" runat="server" OnClick="lnkbildirimekle_Click" >Ekle</asp:LinkButton></span></a></li>
+      </ul>
+   </li>
+   <li class='has-sub'><a href='#'><span>Makale</span></a>
+      <ul>
+        
+          <li><a href='#'><span><asp:LinkButton ID="lnkmakalehepsi" runat="server" OnClick="lnkmakalehepsi_Click">Hepsi</asp:LinkButton></span></a></li>
+         <li class='last'><a href='#'><span><asp:LinkButton ID="lnkmakaleekle" runat="server" OnClick="lnkmakaleekle_Click">Ekle</asp:LinkButton></span></a></li>
+      </ul>
+   </li>
+
+   <li class='has-sub'><a href='#'><span>Kategori</span></a>
+      <ul>
+          <li><a href='#'><span><asp:LinkButton ID="lnkkategorihepsi" runat="server" OnClick="lnkkategorihepsi_Click">Hepsi</asp:LinkButton></span></a></li>
+         <li class='last'><a href='#'><span><asp:LinkButton ID="lnkkategoriekle" runat="server" OnClick="lnkkategoriekle_Click">Ekle</asp:LinkButton></span></a></li>
+      </ul>
+   </li>
+   <li class='last'><a href="Etiket.aspx"><span>Etiket</span></a></li>
+     <li class='has-sub'><a href='#'><span>Mesaj</span></a>
+      <ul>
+          <li><a href='#'><span><asp:LinkButton ID="lnkiletisimhepsi" runat="server" OnClick="lnkiletisimhepsi_Click" >Hepsi</asp:LinkButton></span></a></li>
+         <li class='last'><a href='#'><span><asp:LinkButton ID="lnkiletisimcevap" runat="server" OnClick="lnkiletisimcevap_Click">Ekle</asp:LinkButton></span></a></li>
+      </ul>
+   </li>
+    <li class='has-sub'><a href='#'><span>Anket</span></a>
+      <ul>
+          <li><a href='#'><span><asp:LinkButton ID="lnkankethepsi" runat="server" OnClick="lnkankethepsi_Click" >Hepsi</asp:LinkButton></span></a></li>
+         <li class='last'><a href='#'><span><asp:LinkButton ID="lnkanketekle" runat="server" OnClick="lnkanketekle_Click">Ekle</asp:LinkButton></span></a></li>
+      </ul>
+   </li>
+     <li class='last'><a href="profil.aspx"><span>Profil</span></a></li>
+     <li class='last'>
+         <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Çıkış Yap</asp:LinkButton></li>
+      <li class='last'><a href="../../sitemap.aspx"><span>Sitemap Guncelle</span></a></li>
+</ul>
+</div>
+        <br />
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,6 @@
+﻿User-agent: *
+disallow:/www/
+disallow:/hata.aspx
+disallow:/Login.aspx
+disallow:/cresim.aspx
+sitemap:http://wwww.enverinkoddefteri.com/sitemap.xml
